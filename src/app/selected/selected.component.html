@@ -1,0 +1,28 @@
+
+  <div >
+    <div class="clr-col-lg-12 clr-col-12">
+        <div class="card">
+            <div *ngIf="msg.length;else other_content" class="card-block row">
+              <div>{{msg}}</div>
+            </div>
+            <ng-template #other_content>
+              <div  class="card-block row">
+                  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 cmpname">
+                      <h3 class="card-title">{{data.companyName}}</h3>
+                  </div>
+  
+                  <div>
+                    <div class="row">
+                      <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Category: {{data.category}}</p>
+                      <p class="col-xs-6 col-sm-6 col-md-6 col-lg-6">Package: {{data.package}}</p>
+                    </div>
+                  
+                  </div>
+                  
+              </div>
+            </ng-template>
+        </div>
+        <br>
+    </div>
+  </div>
+ 

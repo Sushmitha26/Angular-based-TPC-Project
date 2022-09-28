@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement</title>
+</head>
+<body>
+  <div class="container-fluid imag">
+  <div class="row centered">
+
+  <div class="registration-form col-xs-5 col-sm-5 col-md-5 col-lg-5">    
+     
+    <form [formGroup] = "userData" (ngSubmit) = "onSubmit(userData.value)" >
+        <h3 style="text-align: center;">Register</h3>
+        <br>
+        <p *ngIf="err_flag" style="color:red">{{err_msg}}</p>
+        <div class="form-group">
+          <input  
+            type="email" 
+            class="form-control item" 
+            id="email" 
+            name="email" 
+            placeholder="Enter Email" 
+            required="" 
+            formControlName="email">
+      </div>
+        <div class="form-group">
+            <input 
+              type="text" 
+              class="form-control item" 
+              id="usn" 
+              name="usn" 
+              placeholder="USN" 
+              required="" 
+              formControlName="usn">
+        </div>
+
+        <div class="form-group">
+            <input 
+              type="password" 
+              class="form-control item" 
+              id="password" 
+              name="password" 
+              placeholder="Password" 
+              required="" 
+              formControlName="password">
+        </div>
+        <div class="form-group">
+            <input  
+              type="password" 
+              class="form-control item" 
+              id="password1" 
+              name="password1" 
+              placeholder="Confirm Password" 
+              required="" 
+              formControlName="password1">
+        </div>
+        <div class="form-group">
+         <p><button id="btnclk" type="submit" class="btn btn-success" value="register">Register</button>
+          Already Registered? <a routerLink="/">login</a></p>   
+        </div>
+    </form>
+  </div>
+
+  <div class="content col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    National Institute of Engineering was started in the year 1946. With a renowned community of alumni, NIE is recognised for its excellent faculty with supporting resources and infrastructure.
+    The National Institute of Engineering (NIE) is a grant-in-aid institution and approved by the All India Council for Technical Education (AICTE), New Delhi. NIE got autonomous status from Visvesvaraya Technological University, Belagavi in 2007. 
+    <br>The Placement & Training department of NIE plays a vital role and is becoming a key department of the Institute. From the very beginning the institute lays greater emphasis on Industrial Training and Practical Training for engineering students. 
+    NIE is one among the first engineering college to establish the Training and Placement Department. The Placement Cell serves to merely bridge the gap between a job-aspirant and a prospective employer.
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>

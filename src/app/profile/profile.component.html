@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement</title>
+</head>
+<body>
+
+  <div *ngIf="session_flag" class="container-fluid imag">
+  <div class="row centered">
+
+  <div class="profile-form col-xs-5 col-sm-5 col-md-5 col-lg-5">    
+     
+    <form [formGroup] = "profileData" (ngSubmit) = "onSubmit(profileData.value)" >
+        <h3 style="text-align: center;">Profile</h3>
+        <br>
+        
+        <label for="email">Email:</label><br>
+        <div class="form-group">
+          <input  
+            type="email" 
+            class="form-control item" 
+            id="email" 
+            name="email" 
+            value= "{{email}}" 
+            readonly >
+        </div>
+        <label for="usn">USN:</label><br>
+        <div class="form-group">
+            <input 
+              type="text" 
+              class="form-control item" 
+              id="usn" 
+              name="usn" 
+              value="{{usn}}" 
+              readonly>
+        </div>
+        <label for="name">Name:</label><br>
+        <div class="form-group">
+            <input 
+              type="text" 
+              class="form-control item" 
+              id="name" 
+              name="name" 
+              required="" 
+              formControlName="name">
+        </div>
+        <label for="dob">Date of Birth:</label><br>
+        <div class="form-group">
+            <input 
+              type="date" 
+              class="form-control item" 
+              id="dob" 
+              name="dob" 
+              required="" 
+              formControlName="dob">
+        </div>
+        <label for="gender">Gender:</label><br>
+        <div class="form-group">
+          <input  
+            type="radio" 
+            id="male" 
+            name="gender" 
+            value="male"
+            formControlName="gender">
+            <label for="html">Male</label><br>
+          <input  
+            type="radio" 
+            id="female" 
+            name="gender" 
+            value="female"
+            formControlName="gender">
+            <label for="html">Female</label><br>
+        </div><br>
+        <label for="email1">Email Id - given by college</label><br>
+        <div class="form-group">
+            <input 
+              type="email" 
+              class="form-control item" 
+              id="email1" 
+              name="email1" 
+              required="" 
+              formControlName="email1">
+        </div>
+        <label for="phone">Your Contact Number(Do not add 0/+1, 10 digits only):</label><br>
+        <div class="form-group">
+            <input  
+              type="number" 
+              class="form-control item" 
+              id="phone" 
+              name="phone"  
+              required="" 
+              formControlName="phone">
+        </div>
+        <label for="phone1">Alternate Contact Number,if any(Do not add 0/+1, 10 digits only):</label><br>
+        <div class="form-group">
+          <input  
+            type="text" 
+            class="form-control item" 
+            id="phone1" 
+            name="phone1"  
+            formControlName="phone1">
+        </div>
+        <label for="p_phone">Parents Contact Number(Do not add 0/+1, 10 digits only):</label><br>
+        <div class="form-group">
+          <input  
+            type="text" 
+            class="form-control item" 
+            id="p_phone" 
+            name="p_phone"  
+            formControlName="p_phone">
+        </div>
+        <label for="address">Current Address:</label><br>
+        <div class="form-group">
+          <input  
+            type="text" 
+            class="form-control item" 
+            id="address" 
+            name="address"  
+            required="" 
+            formControlName="address">
+        </div>
+        <label for="p_address">Permanent Address(Home):</label><br>
+        <div class="form-group">
+          <input  
+            type="text" 
+            class="form-control item" 
+            id="p_address" 
+            name="p_address"  
+            required="" 
+            formControlName="p_address">
+        </div>
+        <label for="tenth_percent">10th/SSLC %:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="tenth_percent" 
+            name="tenth_percent" 
+            required="" 
+            formControlName="tenth_percent">
+        </div>
+        <label for="tenth_board">10th/SSLC BOARD(Use capital letters):</label><br>
+        <div class="form-group">
+          <input  
+            type="text" 
+            class="form-control item" 
+            id="tenth_board" 
+            name="tenth_board" 
+            required="" 
+            formControlName="tenth_board">
+        </div>
+        <label for="tenth_institute">Institution Studied for 10th/SSLC(Use capital letters):</label><br>
+        <div class="form-group">
+          <input  
+            type="text" 
+            class="form-control item" 
+            id="tenth_institute" 
+            name="tenth_institute" 
+            required="" 
+            formControlName="tenth_institute">
+        </div>
+        <label for="tenth_year">10th/SSLC Qualified Year:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="tenth_year" 
+            name="tenth_year" 
+            required="" 
+            formControlName="tenth_year">
+        </div>
+        <label for="twelve_percent">12th/PUC %:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="twelve_percent" 
+            name="twelve_percent" 
+            required="" 
+            formControlName="twelve_percent">
+        </div>
+        <label for="twelve_board">12th/PUC BOARD(Use capital letters):</label><br>
+        <div class="form-group">
+          <input  
+            type="text" 
+            class="form-control item" 
+            id="twelve_board" 
+            name="twelve_board" 
+            required="" 
+            formControlName="twelve_board">
+        </div>
+        <label for="twelve_institute">Institution Studied for 12th/PUC(Use capital letters):</label><br>
+        <div class="form-group">
+          <input  
+            type="text" 
+            class="form-control item" 
+            id="twelve_institute" 
+            name="twelve_institute" 
+            required="" 
+            formControlName="twelve_institute">
+        </div>
+        <label for="twelve_year">12th/PUC Qualified Year:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="twelve_year" 
+            name="twelve_year" 
+            required="" 
+            formControlName="twelve_year">
+        </div>
+        <label for="entryMode">Mode of Admission:</label><br>
+        <div class="form-group">
+          <input  
+            type="radio" 
+            id="COMEDK" 
+            name="entryMode" 
+            value="COMEDK"
+            formControlName="entryMode">
+            <label for="html">COMEDK</label><br>
+          <input  
+            type="radio" 
+            id="CET" 
+            name="entryMode" 
+            value="CET"
+            formControlName="entryMode">
+            <label for="html">CET</label><br>
+          <input  
+            type="radio" 
+            id="management" 
+            name="entryMode" 
+            value="management"
+            formControlName="entryMode">
+            <label for="html">Management</label><br>
+        </div><br>
+        <label for="rank">COMEDK/CET Ranking:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="rank" 
+            name="rank" 
+            required="" 
+            formControlName="rank">
+        </div>
+        <label for="rank">Branch</label><br>
+        <div class="form-group">
+          <select name="branch" id="branch" formControlName="branch">
+            <option value="CSE">Computer Science</option>
+            <option value="ISE">Information Science</option>
+            <option value="ECE">Electronics and Communication</option>
+            <option value="EEE">Electricals and Electronics</option>
+            <option value="CVE">Civil</option>
+            <option value="ME">Mechanical</option>
+            <option value="IPE">Industrial Production</option>
+          </select>
+        </div>
+        <label for="first_sem_sgpa">1st sem SGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="first_sem_sgpa" 
+            name="first_sem_sgpa" 
+            required="" 
+            formControlName="first_sem_sgpa">
+        </div>
+        <label for="first_sem_percent">1st sem Percentage(SGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="first_sem_percent" 
+            name="first_sem_percent" 
+            required="" 
+            formControlName="first_sem_percent">
+        </div>
+        <label for="second_sem_sgpa">2nd sem SGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="second_sem_sgpa" 
+            name="second_sem_sgpa" 
+            required="" 
+            formControlName="second_sem_sgpa">
+        </div>
+        <label for="second_sem_percent">2nd sem Percentage(SGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="second_sem_percent" 
+            name="second_sem_percent" 
+            required="" 
+            formControlName="second_sem_percent">
+        </div>
+        <label for="third_sem_sgpa">3rd sem SGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="third_sem_sgpa" 
+            name="third_sem_sgpa" 
+            required="" 
+            formControlName="third_sem_sgpa">
+        </div>
+        <label for="third_sem_percent">3rd sem Percentage(SGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="third_sem_percent" 
+            name="third_sem_percent" 
+            required="" 
+            formControlName="third_sem_percent">
+        </div>
+        <label for="fourth_sem_sgpa">4th sem SGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="fourth_sem_sgpa" 
+            name="fourth_sem_sgpa" 
+            required="" 
+            formControlName="fourth_sem_sgpa">
+        </div>
+        <label for="fourth_sem_percent">4th sem Percentage(SGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="fourth_sem_percent" 
+            name="fourth_sem_percent" 
+            required="" 
+            formControlName="fourth_sem_percent">
+        </div>
+        <label for="fifth_sem_sgpa">5th sem SGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="fifth_sem_sgpa" 
+            name="fifth_sem_sgpa" 
+            required="" 
+            formControlName="fifth_sem_sgpa">
+        </div>
+        <label for="fifth_sem_percent">5th sem Percentage(SGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="fifth_sem_percent" 
+            name="fifth_sem_percent" 
+            required="" 
+            formControlName="fifth_sem_percent">
+        </div>
+        <label for="sixth_sem_sgpa">6th sem SGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="sixth_sem_sgpa" 
+            name="sixth_sem_sgpa" 
+            required="" 
+            formControlName="sixth_sem_sgpa">
+        </div>
+        <label for="sixth_sem_percent">6th sem Percentage(SGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="sixth_sem_percent" 
+            name="sixth_sem_percent" 
+            required="" 
+            formControlName="sixth_sem_percent">
+        </div>
+        <label for="seventh_sem_sgpa">7th sem SGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="seventh_sem_sgpa" 
+            name="seventh_sem_sgpa" 
+            formControlName="seventh_sem_sgpa">
+        </div>
+        <label for="seventh_sem_percent">7th sem Percentage(SGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="seventh_sem_percent" 
+            name="seventh_sem_percent" 
+            formControlName="seventh_sem_percent">
+        </div>
+        <label for="eigth_sem_sgpa">8th sem SGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="eigth_sem_sgpa" 
+            name="eigth_sem_sgpa" 
+            formControlName="eigth_sem_sgpa">
+        </div>
+        <label for="eigth_sem_percent">8th sem Percentage(SGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="eigth_sem_percent" 
+            name="eigth_sem_percent" 
+            formControlName="eigth_sem_percent">
+        </div>
+        <label for="cgpa">CGPA:</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="cgpa" 
+            name="cgpa" 
+            required
+            formControlName="cgpa">
+        </div>
+        <label for="cgpa_percent">CGPA Percentage(CGPA - 0.75 * 10):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="cgpa_percent" 
+            name="cgpa_percent" 
+            required
+            formControlName="cgpa_percent">
+        </div>
+        <label for="credits">Total credits earned(Upto 6th semester):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="credits" 
+            name="credits" 
+            required
+            formControlName="credits">
+        </div>
+        <label for="mute">Number of subjects cleared in mute(If you don't write mute,fill it as 0):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="mute" 
+            name="mute" 
+            required
+            formControlName="mute">
+        </div>
+        <label for="arrears">Current Arrears(If no current arrears,fill it as 0):</label><br>
+        <div class="form-group">
+          <input  
+            type="number" 
+            class="form-control item" 
+            id="arrears" 
+            name="arrears" 
+            required
+            formControlName="arrears">
+        </div>
+        
+  
+        <p *ngIf="profileData.touched && profileData.invalid" style="color:red">*Fields can't be empty!</p>
+        <div class="form-group"> <!--[disabled]="!profileData.valid"-->
+         <p><button id="btnclk" type="submit" class="btn btn-success" value="update" >Update</button></p>   
+        </div>
+    </form>
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>

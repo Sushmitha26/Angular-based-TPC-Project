@@ -1,0 +1,28 @@
+<div class="list">
+<div class="register routes">
+  <div class="card text-center" style="width: 230%;">
+  <div class="card-header head">
+      Register now
+    </div>
+    <div class="card-header bg-clr">
+      <ul class="nav nav-tabs card-header-tabs">
+         <li class="nav-item first" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" routerLink="selected">Selected</a>
+        </li>
+        <li class="nav-item eligible" routerLinkActive="active">
+          <a class="nav-link" routerLink="eligible">Eligible</a>
+        </li>
+        <li class="nav-item ineligible" routerLinkActive="active">
+          <a class="nav-link" routerLink="ineligible">Ineligible</a>
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+     <router-outlet></router-outlet>
+    </div>
+  </div>
+  </div>
+
+  <div class="oncampus ml-auto"><app-oncampus-list></app-oncampus-list></div>
+</div>
+  

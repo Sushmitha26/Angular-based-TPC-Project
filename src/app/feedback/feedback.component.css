@@ -1,0 +1,50 @@
+.flex-container{
+  display: flex;
+  justify-content: space-around;   
+  padding: 30px 40px;
+}
+
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 70%;
+  float: left;
+  margin-left: 10px;
+  align-self: center;
+}
+
+.card-header{
+  background-color:rgb(179, 215, 245);
+  text-align: center;
+}
+
+.form-group{
+  width: 100%;
+  display: flex;
+  margin:20px 0px 20px 0px;
+}
+
+label{
+  width: 25%;
+  text-align: left;
+  margin-left: 10%;
+}
+
+span{
+  width: 90%;
+  margin-right: 10%;
+}
+
+.btn {
+  background-color:rgb(83, 160, 231);
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+}
+
+.btn:hover {
+  background-color: RoyalBlue;
+}

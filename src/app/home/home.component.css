@@ -1,0 +1,63 @@
+.head {
+  background-color: #bed6cc;
+}
+
+.register {
+  margin: 5%;
+  margin-left: 10%;
+}
+
+.details {
+  padding-left: 20%;
+}
+
+.list {
+  margin-left: 0%;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.bg-clr {
+  background-color: cornflowerblue;
+}
+
+.nav-item {
+  padding-right: 20%;
+}
+
+.eligible {
+  padding-right: 20%;
+}
+
+.ineligible {
+  padding-right: 4%;
+}
+
+.first {
+  padding-left: 4%;
+}
+
+.nav-tabs>li.active {
+  background-color: #303136 !important;
+  border: medium none;
+  border-radius: 0;
+  color: #fff;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+}
+
+.oncampus {
+  margin: 1.5%;
+  margin-top: 5%;
+  padding-right: 15%;
+  padding-left: 30%;
+}
+
+.routes {
+  margin-left: 1.5%;
+}

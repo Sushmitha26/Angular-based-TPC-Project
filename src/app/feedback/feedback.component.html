@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=UdHUthirHsQYhfjgTbZuTgZss9yiVHE7WuZMucmhk4UUKHTHdrHmJxdzYzu34kKoz0i4hwxQCquCrOTtNOBZf9hrPBQw8cXVjUqKVI0s8QJFv2q0spl1WMmxfw2PSXXqSvb8HZlpj99omJ9_TKbM6N59fJfIayRSueQEVCX_DOAO6MP_ZAh090P3GEoB0WGnwUvNm3Jrjt-YC3W2DReCfiK4E5p6CJ8tElQcFj0_FEGyYwESmkiko5r91CDLMLqUq0ChpbdLYha4RFTELS_7eDDWR3QehCkGZhwYlrUtUGgasXc2hLlZGnTxX3EkWIEh2iSaDf5Wak5r6XOKwqNDfox1cho7E3OCiKhjo4KiQ4oVESj8UI5onfJnHcFgrbe7CpG3WiiQxszyekQ897jSyWxY6HBSQeOrEjDpKSXx7facvkEnD6N4aHMp9R9lO_sbWX236MucXJYluK2nkE9YK3rtgsW_wzR6Hv6edIsS8BO3iX0nW2HcsOBLYF9l3AVfnbpBOkMrv9dkC36u2rMEU_xbb4qcGkgprtGBfpQiC7f-lw6JQf_8THytK3hyLIyliJft-ozmJxZmuZaBTBqenuys9wU5cDLczatFfOtbxTe2Tr4w8j1mBbq4dkkOMZPJ2wvsKBscBLGpU76TxUf1HizykXXedOvswj3ZM6nj1XQ1LWz2Coi0wZk5dODSRrRW8m9HSr3yDjhqCaVlRCGmCLId1x7Dnv2qJE_lJYPukpqTnrtKzHdFrDmYlVYa0GEobrxWXvDfISPxWPhU99yct2dlUsSSo6dBpNx5EqR-_6gJNWBp2fZZPrcb7JUn3sMN-UD4FLTHU6iUKQF6qK_eGZ8WMOBn2URFd0a-Y8MzUFkASlw0dmVQz2TAxN_8ZF9h2pCwqSdq0B4Q7_jAx6qO1_hWZWit90eHGuRtFedoU1n86YmTASRf-6G202vQUxRQ9oMjmT_puw8-0yJURwNgNLi0xUAcZFXafDuyhAtkVaicK-So-m_MNyziwBu1c8ILSFvBoId4wPS6JIuqj88OwQHX8sfBdW2jriQajwnCyyQXcV4wxKozXRXkxu-DcSjVwbdoxCrWHFWKOi7LSX5PMi-ynJVWSSoHtnlAdHToqIYle__McJdVc-QcUMy0fTcfr3pNm9EbIeDCySqu9zio73ywkwA_zLOghwvOWsZ-sVra5ri67hTw3n4C0id0RCNoWh0Pa1lj6VM8W2P7KLJBWQ" nonce="cb7457cdbd6a3249abe236e171be4a4c" charset="UTF-8"></script></head>
+<body>
+
+    <div class="container-fluid">
+        <div class="flex-container">
+            <div class="card">
+                <div class="card-header">FEEDBACK AND SUGGESTIONS</div>
+                    <div class="card-body">
+                        <p>We at NIE, believe that seniors' guidance plays a major role in a student's preparation for placements. We have created this "Feedback and Suggestions" section to encourage all the seniors to share their experiences during the placement process. It's your turn to help out your juniors now.</p>
+                        <br>
+                        <div class="form">
+                        <form [formGroup] = "feedbackData" (ngSubmit) = "onSubmit(feedbackData.value)" >
+                          <p *ngIf="err_flag" style="color:red">{{err_msg}}</p>
+                            <div class="form-group">
+                                <label for="company_name" style="font-weight: 500;" >Company Name :</label>
+                                <span>
+                                <input 
+                                  type="text" 
+                                  class="form-control item" 
+                                  id="company_name" 
+                                  name="company_name" 
+                                  required="" 
+                                  formControlName="company_name"/>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="job_role" style="font-weight: 500;" >Job Role :</label>
+                                <span>
+                                <input 
+                                  type="text" 
+                                  class="form-control item" 
+                                  id="job_role" 
+                                  name="job_role" 
+                                  required="" 
+                                  formControlName="job_role"/>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="ctc" style="font-weight: 500;" >CTC :</label>
+                                <span>
+                                <input 
+                                  type="text" 
+                                  class="form-control item" 
+                                  id="ctc" 
+                                  name="ctc" 
+                                  required="" 
+                                  formControlName="ctc"/>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="work_location" style="font-weight: 500;" >Work location :</label>
+                                <span>
+                                <input 
+                                  type="text" 
+                                  class="form-control item" 
+                                  id="work_location" 
+                                  name="work_location" 
+                                  required="" 
+                                  formControlName="work_location"/>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="test-type" style="font-weight: 500;" >Test type :</label>
+                                <span>
+                                    <select 
+                                      class="form-control item"
+                                      name="test_type" 
+                                      id="test_type"
+                                      formControlName="test_type">
+                                      <option value="test_online">Online test</option>
+                                      <option value="test_offline">Offline test</option>
+                                    </select>  
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="tech_questions" style="font-weight: 500;" >Technical questions :</label>
+                                <span>
+                                <textarea 
+                                  type="text" 
+                                  wrap="soft"
+                                  rows="2"
+                                  class="form-control item" 
+                                  id="tech_questions" 
+                                  name="tech_questions" 
+                                  required="" 
+                                  formControlName="tech_questions">
+                                  </textarea>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label for="other_questions" style="font-weight: 500;" >Other questions :</label>
+                                <span>
+                                <textarea 
+                                  type="text" 
+                                  wrap="soft"
+                                  rows="2"
+                                  class="form-control item" 
+                                  id="other_questions" 
+                                  name="other_questions" 
+                                  required="" 
+                                  formControlName="other_questions">
+                                  </textarea>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                              <label for="subjects" style="font-weight: 500;" >Subjects covered :</label>
+                              <span>
+                              <textarea 
+                                type="text" 
+                                wrap="soft"
+                                rows="2"
+                                class="form-control item" 
+                                id="subjects" 
+                                name="subjects" 
+                                required="" 
+                                formControlName="subjects">
+                                </textarea>
+                              </span>
+                          </div>
+                            <div class="form-group">
+                                <label for="tips" style="font-weight: 500;" >Tips for preparation :</label>
+                                <span>
+                                <textarea 
+                                  type="text" 
+                                  wrap="soft"
+                                  rows="2"
+                                  class="form-control item" 
+                                  id="tips" 
+                                  name="tips" 
+                                  required="" 
+                                  formControlName="tips">
+                                  </textarea>
+                                </span>
+                            </div>
+                            
+                            
+                            <div class="form-group">
+                                <label for="other_info" style="font-weight: 500;" >Other information :</label>
+                                <span>
+                                <textarea 
+                                  type="text" 
+                                  wrap="soft"
+                                  rows="2"
+                                  class="form-control item" 
+                                  id="other_info" 
+                                  name="other_info" 
+                                  required="" 
+                                  formControlName="other_info"></textarea>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <button id="btnclk" type="submit" class="btn btn-success" value="feedbackbutton">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>

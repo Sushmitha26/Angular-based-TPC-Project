@@ -1,0 +1,16 @@
+.foot {
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+}
+p {
+  line-height: 4;
+  color: #fff;
+  display: block;
+}
+footer {
+  
+  text-align: center;
+  background-color: black;
+  position: relative;
+}

@@ -1,0 +1,15 @@
+<div *ngIf="oncampus_flag" class="card" style="width: 18rem;">
+  <div class="card-header">
+    Oncampus List
+  </div>
+  <ul class="list-group list-group-flush">
+    <li *ngFor="let company of company_list" class="list-group-item">
+    <div class="row">
+    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+    {{company.company_name}}
+    </div>
+    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 date">{{company.visiting_date}}</div>
+    </div>
+    </li>
+  </ul>
+</div>

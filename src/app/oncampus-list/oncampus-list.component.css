@@ -1,0 +1,12 @@
+.card-header {
+  background-color: #bed6cc;
+  text-align: center;
+}
+
+.card {
+  color: #000;
+}
+
+.date {
+  padding-right: -20%;
+}
